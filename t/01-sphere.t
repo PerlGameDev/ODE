@@ -1,9 +1,10 @@
 use Test::More;
 
-use_ok('ODE::Collision::Sphere');
+use ODE::Collision::Space;
+use ODE::Collision::Sphere;
 
 #my $spaceID = ODE::Space->foo .. Needed
-my $spaceID = 01;
+my $spaceID = ODE::Collision::Space::simple_space_create();
 
 ok(my $sphere = ODE::Collision::Sphere::create_sphere( $spaceID, 0.3 ), 'creating sphere with radius 0.3');
 

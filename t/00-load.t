@@ -1,10 +1,15 @@
-#!perl -T
-
-use Test::More tests => 1;
+use strict;
+use warnings;
+use Test::Most 'bail';
 
 BEGIN {
-    use_ok( 'ODE' ) || print "Bail out!
-";
-}
+	my @modules = qw /
+		ODE
+		ODE::Collision::Sphere
+		ODE::Collision::Box
+		ODE::Collision::Space
+		/;
+	plan tests => scalar @modules;
 
-diag( "Testing ODE $ODE::VERSION, Perl $], $^X" );
+	use_ok $_ foreach @modules;
+}
