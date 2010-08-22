@@ -19,7 +19,7 @@ my $builder = Module::Build->new(
     add_to_cleanup      => [ 'ODE-*' ],
     create_makefile_pl => 'traditional',
     c_source 	=> 'src',    
-    extra_linker_flags => Alien::ODE->config('libs'),
+    extra_linker_flags => Alien::ODE->config('libs').' -lstdc++',
     extra_compiler_flags => Alien::ODE->config('cflags'),
 	
 );
