@@ -11,7 +11,7 @@ MODULE = ODE::Collision::Sphere 		PACKAGE = ODE::Collision::Sphere		PREFIX = ocs
 dGeomID
 ocs_create_sphere ( space, radius )
 	dSpaceID space
-	dRead radius
+	dReal radius
 	PREINIT:
 		char *CLASS = "ODE::Collision::Sphere";
 	CODE:
