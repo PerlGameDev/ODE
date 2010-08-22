@@ -2,9 +2,10 @@ use Test::More;
 
 use_ok('ODE::Collision::Sphere');
 
-ok(my $sphere = ODE::Collision::Sphere->create_sphere( 0.3 ), 'creating sphere with radius 0.3');
+#my $spaceID = ODE::Space->foo .. Needed
+my $spaceID = 01;
 
-isa_ok($sphere, 'ODE::Collision::Sphere');
+ok(my $sphere = ODE::Collision::Sphere::create_sphere( $spaceID, 0.3 ), 'creating sphere with radius 0.3');
 
 can_ok($sphere, qw(get_radius point_depth set_radius));
 
