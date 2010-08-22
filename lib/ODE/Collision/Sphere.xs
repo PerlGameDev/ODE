@@ -39,4 +39,17 @@ ocs_set_radius ( sphere, radius )
 		dGeomSphereSetRadius ( sphere, radius)
 
 
+dReal
+ocs_point_depth ( sphere, x, y, z )
+	dGeomID sphere
+	dReal x
+	dReal y
+	dReal z
+	PREINIT:
+		char *CLASS = "ODE::Collision::Sphere";
+	CODE:
+		RETVAL = dGeomSpherePointDepth ( sphere, x, y, z );
+	OUTPUT:
+		RETVAL
+
 
