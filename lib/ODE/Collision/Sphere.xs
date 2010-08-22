@@ -31,4 +31,12 @@ ocs_get_radius( sphere )
 		RETVAL
 
 
+void
+ocs_set_radius ( sphere, radius )
+	dGeomID sphere
+	dReal radius
+	CODE:
+		dGeomSphereSetRadius ( sphere, radius)
+
+
 
