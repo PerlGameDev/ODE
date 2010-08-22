@@ -8,17 +8,17 @@ my $spaceID = ODE::Collision::Space::simple_space_create();
 
 ok(my $sphere = ODE::Collision::Sphere::create_sphere( $spaceID, 0.3 ), 'creating sphere with radius 0.3');
 
-can_ok($sphere, qw(get_radius point_depth set_radius));
+can_ok(ODE::Collision::Sphere, qw(get_radius point_depth set_radius));
 
-is( $sphere->get_radius, 0.3, 'get_radius got proper initialization value');
+is( ODE::Collision::Sphere::get_radius($sphere), 0.3, 'get_radius got proper initialization value');
 
-ok($sphere->set_radius(0.7), 'calling set_radius()');
+ok( ODE::Collision::Sphere::set_radius($sphere, 0.7), 'calling set_radius()');
 
-is( $sphere->get_radius, 0.7, 'get_radius got new (changed) value');
+is( ODE::Collision::Sphere::get_radius($sphere), 0.7, 'get_radius got new (changed) value');
 
-ok( $sphere->point_depth(0,0,0) > 0, 'points inside the sphere have a positive depth');
+ok( ODE::Collision::Sphere::point_depth($sphere,0,0,0) > 0, 'points inside the sphere have a positive depth');
 
-ok( $sphere->point_depth(10,10,10) > 0, 'points outside the sphere have a negative depth');
+ok( ODE::Collision::Sphere::point_depth($sphere,10,10,10) > 0, 'points outside the sphere have a negative depth');
 
 TODO: {
     local $TODO = "Can't do proper math at 4am";
@@ -31,7 +31,7 @@ TODO: {
     my $y = $r * sin($theta) * sin($phi);
     my $z = $r * cos($theta);
 
-    ok( $sphere->point_depth($x, $y, $z) == 0, 'points on the surface have a depth of zero');
+    ok( ODE::Collision::Sphere::point_depth($sphere, $x, $y, $z) == 0, 'points on the surface have a depth of zero');
 };
 
 done_testing();
