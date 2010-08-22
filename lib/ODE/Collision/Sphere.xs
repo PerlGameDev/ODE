@@ -8,4 +8,16 @@
 MODULE = ODE::Collision::Sphere 		PACKAGE = ODE::Collision::Sphere		PREFIX = ocs_
 
 
+dGeomID
+ocs_create_sphere ( space, radius )
+	dSpaceID space
+	dRead radius
+	PREINIT:
+		char *CLASS = "ODE::Collision::Sphere";
+	CODE:
+		RETVAL = dCreateSphere( space, radius );
+	OUTPUT:
+		RETVAL
+
+
 
