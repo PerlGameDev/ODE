@@ -24,11 +24,10 @@ ocb_create_box ( space, lx, ly, lz )
 
 void
 ocb_set_lengths( box, lx, ly, lz )
-    dGeomID box
-    dReal lx
-    dReal ly
-    dReal lz
-    CODE:
-        dGeomBoxSetLengths( box, lx, ly, lz )
-
+	dGeomID box
+	dReal lx
+	dReal ly
+	dReal lz
+	CODE:
+		dGeomBoxSetLengths( box, lx, ly, lz )
 
