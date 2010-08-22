@@ -4,7 +4,12 @@ int **			T_PTR
 void *			T_PTR
 float *			T_PTR
 float			T_NV
-int			T_IV
+int				T_IV
+struct dxGeom*	T_PTR
+dGeomID			T_PTR
+dReal			T_NV
+dSpaceID		T_PTR
+struct dxSpace*	T_PTR
 
 OUTPUT
 
