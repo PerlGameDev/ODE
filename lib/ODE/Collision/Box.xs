@@ -29,5 +29,17 @@ ocb_set_lengths( box, lx, ly, lz )
 	dReal ly
 	dReal lz
 	CODE:
-		dGeomBoxSetLengths( box, lx, ly, lz )
+		dGeomBoxSetLengths( box, lx, ly, lz );
+
+dReal *
+ocb_get_lengths( box )
+	dGeomID box
+	CODE:
+		/* make our destination vector */
+		dReal dVector3[4];
+		dGeomBoxGetLengths( box, dVector3 );
+		RETVAL = dVector3;
+	OUTPUT:
+		RETVAL
+
 
