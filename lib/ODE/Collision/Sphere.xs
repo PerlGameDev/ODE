@@ -34,7 +34,7 @@ ocs_set_radius ( sphere, radius )
 	dGeomID sphere
 	dReal radius
 	CODE:
-		dGeomSphereSetRadius ( sphere, radius)
+		dGeomSphereSetRadius ( sphere, radius);
 
 
 dReal
