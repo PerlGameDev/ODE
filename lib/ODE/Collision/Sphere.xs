@@ -23,8 +23,6 @@ ocs_create_sphere ( space, radius )
 dReal
 ocs_get_radius( sphere )
 	dGeomID sphere
-	PREINIT:
-		char *CLASS = "ODE::Collision::Sphere";
 	CODE:
 		RETVAL = dGeomSphereGetRadius( sphere );
 	OUTPUT:
@@ -45,8 +43,6 @@ ocs_point_depth ( sphere, x, y, z )
 	dReal x
 	dReal y
 	dReal z
-	PREINIT:
-		char *CLASS = "ODE::Collision::Sphere";
 	CODE:
 		RETVAL = dGeomSpherePointDepth ( sphere, x, y, z );
 	OUTPUT:
