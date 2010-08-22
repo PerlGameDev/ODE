@@ -12,8 +12,6 @@ dGeomID
 ocs_create_sphere ( space, radius )
 	dSpaceID space
 	dReal radius
-	PREINIT:
-		char *CLASS = "ODE::Collision::Sphere";
 	CODE:
 		RETVAL = dCreateSphere( space, radius );
 	OUTPUT:
