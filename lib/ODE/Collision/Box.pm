@@ -1,6 +1,9 @@
 package ODE::Collision::Box;
 use strict;
 use warnings;
+use vars qw(@ISA);
+require DynaLoader;
+our @ISA = qw(DynaLoader);
 
 bootstrap ODE::Collision::Box;
 
