@@ -20,4 +20,15 @@ ocs_create_sphere ( space, radius )
 		RETVAL
 
 
+dReal
+ocs_get_radius( sphere )
+	dGeomID sphere
+	PREINIT:
+		char *CLASS = "ODE::Collision::Sphere";
+	CODE:
+		RETVAL = dGeomSphereGetRadius( sphere );
+	OUTPUT:
+		RETVAL
+
+
 
