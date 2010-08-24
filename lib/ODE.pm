@@ -3,32 +3,37 @@ package ODE;
 use warnings;
 use strict;
 
+our $VERSION = '0.01';
+
+1; # End of ODE
+__END__
 =head1 NAME
 
 ODE - Perl Bindings to the C physics library ODE
 
-=head1 VERSION
-
-Version 0.01
-
-=cut
-
-our $VERSION = '0.01';
-
-
 =head1 SYNOPSIS
 
-=head1 AUTHOR
+=head1 DESCRIPTION
+
+These are the Perl bindings for ODE, an open source, high performance
+library for simulating rigid body dynamics. It is fully featured, stable,
+mature and platform independent, with advanced joint types and integrated
+collision detection with friction. ODE is useful for simulating vehicles,
+objects in virtual reality environments and virtual creatures, and is
+currently used in many computer games, 3D authoring tools and simulation
+tools.
+
+=head1 AUTHORS
 
 Kartik Thakore, C<< <thakore.kartik at cpan.org> >>
+
+Breno G. de Oliveira C<< <garu at cpan.org> >>
 
 =head1 BUGS
 
 Please report any bugs or feature requests to C<bug-ode at rt.cpan.org>, or through
 the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ODE>.  I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
-
-
 
 
 =head1 SUPPORT
@@ -77,6 +82,14 @@ L<http://search.cpan.org/dist/ODE/>
 
 =head1 ACKNOWLEDGEMENTS
 
+Many thanks to Russel Smith, the primary author of ODE, and the entire
+ODE community.
+
+=head1 SEE ALSO
+
+L<Alien::ODE>, L<SDL>.
+
+L<http://www.ode.org/>
 
 =head1 LICENSE AND COPYRIGHT
 
@@ -98,6 +111,3 @@ Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
 02111-1307 USA.
 
 
-=cut
-
-1; # End of ODE
