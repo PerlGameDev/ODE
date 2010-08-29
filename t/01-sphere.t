@@ -12,13 +12,13 @@ can_ok(ODE::Collision::Sphere, qw(get_radius point_depth set_radius));
 
 is( ODE::Collision::Sphere::get_radius($sphere), 0.3, 'get_radius got proper initialization value');
 
-ok( ODE::Collision::Sphere::set_radius($sphere, 0.7), 'calling set_radius()');
+ODE::Collision::Sphere::set_radius($sphere, 0.7), pass('calling set_radius()');
 
 is( ODE::Collision::Sphere::get_radius($sphere), 0.7, 'get_radius got new (changed) value');
 
 ok( ODE::Collision::Sphere::point_depth($sphere,0,0,0) > 0, 'points inside the sphere have a positive depth');
 
-ok( ODE::Collision::Sphere::point_depth($sphere,10,10,10) > 0, 'points outside the sphere have a negative depth');
+ok( ODE::Collision::Sphere::point_depth($sphere,10,10,10) < 0, 'points outside the sphere have a negative depth');
 
 TODO: {
     local $TODO = "Can't do proper math at 4am";
