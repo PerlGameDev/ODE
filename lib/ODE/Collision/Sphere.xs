@@ -5,45 +5,40 @@
 
 #include <ode/ode.h>
 
-MODULE = ODE::Collision::Sphere 		PACKAGE = ODE::Collision::Sphere		PREFIX = ocs_
-
+MODULE = ODE::Collision::Sphere		PACKAGE = ODE::Collision::Sphere		PREFIX = ocs_
 
 dGeomID
-ocs_create_sphere ( space, radius )
-	dSpaceID space
-	dReal radius
+ocs_create_sphere( space, radius )
+		dSpaceID space
+		dReal radius
 	CODE:
 		RETVAL = dCreateSphere( space, radius );
 	OUTPUT:
 		RETVAL
 
-
 dReal
 ocs_get_radius( sphere )
-	dGeomID sphere
+		dGeomID sphere
 	CODE:
 		RETVAL = dGeomSphereGetRadius( sphere );
 	OUTPUT:
 		RETVAL
 
-
 void
-ocs_set_radius ( sphere, radius )
-	dGeomID sphere
-	dReal radius
+ocs_set_radius( sphere, radius )
+		dGeomID sphere
+		dReal radius
 	CODE:
-		dGeomSphereSetRadius ( sphere, radius);
-
+		dGeomSphereSetRadius( sphere, radius );
 
 dReal
-ocs_point_depth ( sphere, x, y, z )
-	dGeomID sphere
-	dReal x
-	dReal y
-	dReal z
+ocs_point_depth( sphere, x, y, z )
+		dGeomID sphere
+		dReal x
+		dReal y
+		dReal z
 	CODE:
-		RETVAL = dGeomSpherePointDepth ( sphere, x, y, z );
+		RETVAL = dGeomSpherePointDepth( sphere, x, y, z );
 	OUTPUT:
 		RETVAL
-
 

@@ -5,5 +5,5 @@
 
 #include <ode/ode.h>
 
-MODULE = ODE 		PACKAGE = ODE
+MODULE = ODE		PACKAGE = ODE
 
