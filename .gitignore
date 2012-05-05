@@ -1,3 +1,4 @@
+META.*
 MYMETA.*
 blib*
 Makefile
@@ -14,3 +15,4 @@ ODE-*
 *.c
 *.o
 *.swp
+*.bak
