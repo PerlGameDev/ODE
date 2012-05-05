@@ -5,6 +5,7 @@ use Alien::ODE;
 
 my $builder = Module::Build->new(
     module_name       => 'ODE',
+    dist_abstract     => '3D Physics Library',
     license           => 'lgpl',
     dist_author       => q{Kartik Thakore <thakore.kartik@CPAN.org>},
     dist_version_from => 'lib/ODE.pm',
