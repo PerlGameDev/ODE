@@ -30,8 +30,8 @@ perldoc command.
 
 You can also look for information at:
 
-    RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=ODE
+    GitHub Issues
+        https://github.com/PerlGameDev/ODE/issues
 
     AnnoCPAN, Annotated CPAN documentation
         http://annocpan.org/dist/ODE

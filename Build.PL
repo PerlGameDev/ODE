@@ -21,6 +21,12 @@ my $builder = Module::Build->new(
     c_source             => 'src',
     extra_linker_flags   => Alien::ODE->config('libs') . ' -lstdc++',
     extra_compiler_flags => Alien::ODE->config('cflags'),
+    meta_merge           => {
+        resources => {
+            bugtracker => 'https://github.com/PerlGameDev/ODE/issues',
+            repository => 'https://github.com/PerlGameDev/ODE',
+        },
+    },
 );
 
 $builder->create_build_script();
