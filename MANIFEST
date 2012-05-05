@@ -1,9 +1,22 @@
 Build.PL
 Changes
-MANIFEST
-README
 lib/ODE.pm
+lib/ODE.xs
+lib/ODE/Collision/Box.pm
+lib/ODE/Collision/Box.xs
+lib/ODE/Collision/Space.pm
+lib/ODE/Collision/Space.xs
+lib/ODE/Collision/Sphere.pm
+lib/ODE/Collision/Sphere.xs
+MANIFEST			This list of files
+META.json
+META.yml
+README
+src/ppport.h
 t/00-load.t
+t/01-box.t
+t/01-sphere.t
 t/manifest.t
 t/pod-coverage.t
 t/pod.t
+typemap
