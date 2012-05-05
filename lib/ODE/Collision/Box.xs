@@ -35,11 +35,11 @@ ocb_get_lengths( box )
 	CODE:
 		// make our destination vector
 		AV* array_ref = newAV();
-		dReal dVector3[4];
-		dGeomBoxGetLengths( box, dVector3 );
-		av_push( array_ref, newSVnv(dVector3[0]) );
-		av_push( array_ref, newSVnv(dVector3[1]) );
-		av_push( array_ref, newSVnv(dVector3[2]) );
+		dVector3 lengths;
+		dGeomBoxGetLengths( box, lengths );
+		av_push( array_ref, newSVnv(lengths[0]) );
+		av_push( array_ref, newSVnv(lengths[1]) );
+		av_push( array_ref, newSVnv(lengths[2]) );
 		RETVAL = array_ref;
 		sv_2mortal( (SV *)RETVAL );
 	OUTPUT:
