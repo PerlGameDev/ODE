@@ -6,7 +6,9 @@ use strict;
 our $VERSION = '0.01';
 
 1; # End of ODE
+
 __END__
+
 =head1 NAME
 
 ODE - Perl Bindings to the C physics library ODE
@@ -29,12 +31,14 @@ Kartik Thakore, C<< <kthakore at cpan.org> >>
 
 Breno G. de Oliveira C<< <garu at cpan.org> >>
 
+Jeffrey T. Palmer C<< <jtpalmer at cpan.org> >>
+
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-ode at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ODE>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
+Please report any bugs or feature requests through the web interface at
+L<https://github.com/PerlGameDev/ODE/issues> I will be notified, and
+then you'll automatically be notified of progress on your bug as I make
+changes.
 
 =head1 SUPPORT
 
@@ -42,12 +46,11 @@ You can find documentation for this module with the perldoc command.
 
     perldoc ODE
 
-
 You can also look for information at:
 
 =over 5
 
-=item * SDL Perl Community 
+=item * SDL Perl Community
 
 =over 2
 
@@ -61,9 +64,9 @@ C<#sdl irc.perl.org>
 
 =back
 
-=item * RT: CPAN's request tracker
+=item * GitHub Issues
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=ODE>
+L<https://github.com/PerlGameDev/ODE/issues>
 
 =item * AnnoCPAN: Annotated CPAN documentation
 
@@ -78,7 +81,6 @@ L<http://cpanratings.perl.org/d/ODE>
 L<http://search.cpan.org/dist/ODE/>
 
 =back
-
 
 =head1 ACKNOWLEDGEMENTS
 
@@ -109,5 +111,4 @@ You should have received a copy of the GNU Lesser General Public
 License along with this program; if not, write to the Free
 Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
 02111-1307 USA.
-
 
