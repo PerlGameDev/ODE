@@ -25,7 +25,7 @@ tools.
 
 =head1 AUTHORS
 
-Kartik Thakore, C<< <thakore.kartik at cpan.org> >>
+Kartik Thakore, C<< <kthakore at cpan.org> >>
 
 Breno G. de Oliveira C<< <garu at cpan.org> >>
 
