@@ -33,7 +33,7 @@ Creates a spaceID to use with collisons.
 
 =head1 ACKNOWLEDGEMENTS
 
-Documentation from L<ODE's|http://opende.sourceforge.net/wiki/index.php/Manual_%28Collision_Detection%29#Space_functions>.
+Documentation from L<ODE's|http://ode-wiki.org/wiki/index.php?title=Manual:_Collision_Detection#Space_functions>.
 
 =head1 AUTHORS
 
