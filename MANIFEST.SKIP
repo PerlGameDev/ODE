@@ -1,5 +1,3 @@
-
-#!start included /Users/jtpalmer/.perlbrew/perls/perl-5.14.2/lib/5.14.2/ExtUtils/MANIFEST.SKIP
 # Avoid version control files.
 \bRCS\b
 \bCVS\b
@@ -32,6 +30,7 @@
 \bBuild.COM$
 \bBUILD.COM$
 \bbuild.com$
+^MANIFEST\.SKIP
 
 # Avoid temp and backup files.
 ~$
@@ -55,19 +54,10 @@
 
 # Avoid MYMETA files
 ^MYMETA\.
-#!end included /Users/jtpalmer/.perlbrew/perls/perl-5.14.2/lib/5.14.2/ExtUtils/MANIFEST.SKIP
-
-# Avoid configuration metadata file
-^MYMETA\.
-
-# Avoid Module::Build generated and utility files.
-\bBuild$
-\bBuild.bat$
-\b_build
-\bBuild.COM$
-\bBUILD.COM$
-\bbuild.com$
-^MANIFEST\.SKIP
 
 # Avoid archives of this distribution
 \bODE-[\d\.\_]+
+
+\.o$
+^lib/.*\.c$
+

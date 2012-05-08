@@ -1,5 +1,6 @@
 Build.PL
 Changes
+examples/cube.pl
 lib/ODE.pm
 lib/ODE.xs
 lib/ODE/Collision/Box.pm
@@ -8,14 +9,21 @@ lib/ODE/Collision/Space.pm
 lib/ODE/Collision/Space.xs
 lib/ODE/Collision/Sphere.pm
 lib/ODE/Collision/Sphere.xs
+lib/ODE/Objects/Body.pm
+lib/ODE/Objects/Body.xs
+lib/ODE/Objects/World.pm
+lib/ODE/Objects/World.xs
 MANIFEST			This list of files
 META.json
 META.yml
 README
+src/helper.h
 src/ppport.h
 t/00-load.t
+t/01-body.t
 t/01-box.t
 t/01-sphere.t
+t/01-world.t
 t/manifest.t
 t/pod-coverage.t
 t/pod.t
