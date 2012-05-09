@@ -5,6 +5,8 @@ lib/ODE.pm
 lib/ODE.xs
 lib/ODE/Collision/Box.pm
 lib/ODE/Collision/Box.xs
+lib/ODE/Collision/Plane.pm
+lib/ODE/Collision/Plane.xs
 lib/ODE/Collision/Space.pm
 lib/ODE/Collision/Space.xs
 lib/ODE/Collision/Sphere.pm
