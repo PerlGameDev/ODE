@@ -5,11 +5,12 @@ use Test::Most 'bail';
 BEGIN {
 	my @modules = qw /
 		ODE
-		ODE::Collision::Sphere
 		ODE::Collision::Box
+		ODE::Collision::Plane
 		ODE::Collision::Space
-		ODE::Objects::World
+		ODE::Collision::Sphere
 		ODE::Objects::Body
+		ODE::Objects::World
 		/;
 	plan tests => scalar @modules;
 
