@@ -48,10 +48,11 @@ glEnable(GL_CULL_FACE);
 glLightModelfv_p( GL_LIGHT_MODEL_AMBIENT, 0.2, 0.2, 0.2, 1.0 );
 glShadeModel(GL_SMOOTH);
 
-glLightfv_p( GL_LIGHT0, GL_AMBIENT,  0.1, 0.1,  0.1,  1 );
-glLightfv_p( GL_LIGHT0, GL_DIFFUSE,  0.5, 0.5,  0.5,  1 );
-glLightfv_p( GL_LIGHT0, GL_SPECULAR, 0.8, 0.8,  0.8,  1 );
-glLightfv_p( GL_LIGHT0, GL_POSITION, 200, 300, -800, 1 );
+glLightfv_p( GL_LIGHT0, GL_POSITION, $width / 2, $height / 2, -800, 1 );
+
+glLightfv_p( GL_LIGHT0, GL_AMBIENT,  0.2, 0.2, 0.2, 1.0 );
+glLightfv_p( GL_LIGHT0, GL_DIFFUSE,  0.5, 0.5, 0.5, 1.0 );
+glLightfv_p( GL_LIGHT0, GL_SPECULAR, 0.9, 0.9, 0.9, 1.0 );
 
 $app->add_show_handler(
     sub {
@@ -68,9 +69,9 @@ $app->add_show_handler(
 $app->run();
 
 sub draw_cube {
-    glMaterialfv_p( GL_FRONT, GL_AMBIENT,  0,   0,   1,   1 );
+    glMaterialfv_p( GL_FRONT, GL_AMBIENT,  0.1, 0.1, 1.0, 1.0 );
     glMaterialfv_p( GL_FRONT, GL_DIFFUSE,  0.7, 0.7, 0.7, 1.0 );
-    glMaterialfv_p( GL_FRONT, GL_SPECULAR, 1,   1,   1,   1 );
+    glMaterialfv_p( GL_FRONT, GL_SPECULAR, 1.0, 1.0, 1.0, 1.0 );
     glMateriali( GL_FRONT, GL_SHININESS, 120 );
 
     glLoadIdentity();
