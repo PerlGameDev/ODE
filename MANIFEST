@@ -28,6 +28,7 @@ t/manifest.t
 t/plane.t
 t/pod-coverage.t
 t/pod.t
+t/space.t
 t/sphere.t
 t/world.t
 typemap
