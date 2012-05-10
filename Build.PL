@@ -4,16 +4,16 @@ use Module::Build;
 use Alien::ODE;
 
 my $builder = Module::Build->new(
-    module_name       => 'ODE',
-    dist_abstract     => '3D Physics Library',
-    license           => 'lgpl',
-    dist_author       => q{Kartik Thakore <thakore.kartik@CPAN.org>},
-    dist_version_from => 'lib/ODE.pm',
+    module_name        => 'ODE',
+    dist_abstract      => '3D Physics Library',
+    license            => 'lgpl',
+    dist_author        => q{Kartik Thakore <kthakore@CPAN.org>},
+    dist_version_from  => 'lib/ODE.pm',
     configure_requires => {
-        'Test::More' => 0,
-        'Alien::ODE' => 0,
+        'Module::Build' => 0,
+        'Alien::ODE'    => 0,
     },
-    build_requires    => {
+    build_requires => {
         'Test::More' => 0,
         'Alien::ODE' => 0,
     },
