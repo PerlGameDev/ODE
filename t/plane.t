@@ -7,13 +7,13 @@ use ODE::Collision::Plane;
 
 can_ok( 'ODE::Collision::Plane', qw( create_plane set_params get_params ) );
 
-my $space_id = ODE::Collision::Space::simple_space_create();
+my $space = ODE::Collision::Space::simple_space_create();
 
 # params (a, b, c, d) where (a, b, c) is a unit vector
 my @params = ( 0.3, 0.4, undef, 0.6 );
 $params[2] = sqrt( 1 - $params[0] * $params[0] - $params[1] * $params[1] );
 
-my $plane = ODE::Collision::Plane::create_plane($space_id, @params);
+my $plane = ODE::Collision::Plane::create_plane( $space, @params );
 ok( $plane, 'create_plane' );
 
 cmp_ok( abs( ODE::Collision::Plane::get_params($plane)->[0] - $params[0] ),

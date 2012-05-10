@@ -7,10 +7,10 @@ use ODE::Collision::Box;
 
 can_ok( 'ODE::Collision::Box', qw( create_box set_lengths get_lengths ) );
 
-#my $spaceID = ODE::Space->foo .. Needed
-my $spaceID = ODE::Collision::Space::simple_space_create();
+#my $space = ODE::Space->foo .. Needed
+my $space = ODE::Collision::Space::simple_space_create();
 
-ok( my $box = ODE::Collision::Box::create_box( $spaceID, 0.3, 0.4, 0.5 ),
+ok( my $box = ODE::Collision::Box::create_box( $space, 0.3, 0.4, 0.5 ),
     'creating box 0.3 x 0.4 x 0.5' );
 
 my $lengths = ODE::Collision::Box::get_lengths($box);

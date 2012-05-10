@@ -1,15 +1,18 @@
+#!perl
+use strict;
+use warnings;
 use Test::More;
-
 use ODE::Collision::Space;
 use ODE::Collision::Sphere;
 
-#my $spaceID = ODE::Space->foo .. Needed
-my $spaceID = ODE::Collision::Space::simple_space_create();
+can_ok( 'ODE::Collision::Sphere',
+    qw( create_sphere get_radius set_radius point_depth) );
 
-ok( my $sphere = ODE::Collision::Sphere::create_sphere( $spaceID, 0.3 ),
+#my $space = ODE::Space->foo .. Needed
+my $space = ODE::Collision::Space::simple_space_create();
+
+ok( my $sphere = ODE::Collision::Sphere::create_sphere( $space, 0.3 ),
     'creating sphere with radius 0.3' );
-
-can_ok( ODE::Collision::Sphere, qw(get_radius point_depth set_radius) );
 
 cmp_ok( abs( ODE::Collision::Sphere::get_radius($sphere) - 0.3 ),
     '<', 1e-5, 'get_radius got proper initialization value' );
@@ -42,3 +45,4 @@ TODO: {
 }
 
 done_testing();
+
