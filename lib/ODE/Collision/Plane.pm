@@ -20,13 +20,20 @@ ODE::Collision::Plane - Plane Geometry for Collision Detection
   use ODE;
   use ODE::Collision::Plane;
 
+  my $plane = ODE::Collision::Plane::create_plane( $space, $a, $b, $c, $d );
+
 =head1 METHODS
 
+=head2 create_plane( $space, $a, $b, $c, $d )
 
+=head2 set_params( $plane, $a, $b, $c, $d )
+
+=head2 get_params( $a, $b, $c, $d )
 
 =head1 ACKNOWLEDGEMENTS
 
-Documentation almost taken verbatim from L<ODE's|http://opende.sourceforge.net/docs/group__collide__sphere.html>.
+Documentation almost taken verbatim from
+L<ODE's|http://ode-wiki.org/wiki/index.php?title=Manual:_Collision_Detection#Plane_Class>.
 
 =head1 AUTHORS
 
