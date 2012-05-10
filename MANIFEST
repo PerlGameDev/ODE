@@ -5,6 +5,8 @@ lib/ODE.pm
 lib/ODE.xs
 lib/ODE/Collision/Box.pm
 lib/ODE/Collision/Box.xs
+lib/ODE/Collision/Geom.pm
+lib/ODE/Collision/Geom.xs
 lib/ODE/Collision/Plane.pm
 lib/ODE/Collision/Plane.xs
 lib/ODE/Collision/Space.pm
@@ -24,6 +26,7 @@ src/ppport.h
 t/00-load.t
 t/body.t
 t/box.t
+t/geom.t
 t/manifest.t
 t/plane.t
 t/pod-coverage.t
