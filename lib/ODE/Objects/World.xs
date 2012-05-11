@@ -56,6 +56,21 @@ oow_get_erp( world )
 	OUTPUT:
 		RETVAL
 
+void
+oow_set_cfm( world, cfm )
+		dWorldID world
+		dReal cfm
+	CODE:
+		dWorldSetCFM( world, cfm );
+
+dReal
+oow_get_cfm( world )
+		dWorldID world
+	CODE:
+		RETVAL = dWorldGetCFM( world );
+	OUTPUT:
+		RETVAL
+
 int
 oow_step( world, stepsize )
 		dWorldID world
