@@ -39,15 +39,15 @@ $lz - the length of the box along the Z axis
 Returns a new box geometry. The point of reference for coordinates is
 its center.
 
-=head2 get_lengths($box)
+=head2 get_lengths( $box )
 
-  my ($lx, $ly, $lz) = ODE::Collision::Box::get_lengths($box);
+  my ( $lx, $ly, $lz ) = ODE::Collision::Box::get_lengths( $box );
 
 Get the side lengths of a box.
 
-=head2 set_lengths($box, $lx, $ly, $lz)
+=head2 set_lengths( $box, $lx, $ly, $lz )
 
-  ODE::Collision::Box::set_lengths($box, $lx, $ly, $lz);
+  ODE::Collision::Box::set_lengths( $box, $lx, $ly, $lz );
 
 B<Parameters:>
 
