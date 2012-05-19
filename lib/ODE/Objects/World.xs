@@ -30,16 +30,13 @@ oow_set_gravity( world, x, y, z )
 	CODE:
 		dWorldSetGravity( world, x, y, z );
 
-AV*
+dVector3
 oow_get_gravity( world )
 		dWorldID world
 	CODE:
-		dVector3 gravity;
-		dWorldGetGravity( world, gravity );
-		RETVAL = dv3_to_av( gravity );
+		dWorldGetGravity( world, RETVAL );
 	OUTPUT:
 		RETVAL
-
 
 void
 oow_set_erp( world, erp )

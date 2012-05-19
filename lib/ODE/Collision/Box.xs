@@ -29,19 +29,11 @@ ocb_set_lengths( box, lx, ly, lz )
 	CODE:
 		dGeomBoxSetLengths( box, lx, ly, lz );
 
-AV*
+dVector3
 ocb_get_lengths( box )
 		dGeomID box
 	CODE:
-		// make our destination vector
-		AV* array_ref = newAV();
-		dVector3 lengths;
-		dGeomBoxGetLengths( box, lengths );
-		av_push( array_ref, newSVnv(lengths[0]) );
-		av_push( array_ref, newSVnv(lengths[1]) );
-		av_push( array_ref, newSVnv(lengths[2]) );
-		RETVAL = array_ref;
-		sv_2mortal( (SV *)RETVAL );
+		dGeomBoxGetLengths( box, RETVAL );
 	OUTPUT:
 		RETVAL
 

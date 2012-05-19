@@ -1,7 +1,9 @@
 TYPEMAP
 int		T_IV
 dReal		T_NV
-
+dReal *		T_ARRAY
+dVector3	O_VEC3
+dVector4	O_VEC4
 dBodyID		T_PTR
 dGeomID		T_PTR
 dSpaceID	T_PTR
@@ -19,6 +21,27 @@ O_OBJECT
 		XSRETURN_UNDEF;
 	}
 
+# These are copies of the T_ARRAY typemap.
+O_VEC3
+	U32 ix_$var = $argoff;
+	$var = $ntype(items -= $argoff);
+	while ( items-- ) {
+		DO_ARRAY_ELEM;
+		ix_$var++;
+	}
+	/* this is the number of elements in the array */
+	ix_$var -= $argoff
+
+O_VEC4
+	U32 ix_$var = $argoff;
+	$var = $ntype(items -= $argoff);
+	while ( items-- ) {
+		DO_ARRAY_ELEM;
+		ix_$var++;
+	}
+	/* this is the number of elements in the array */
+	ix_$var -= $argoff
+
 OUTPUT
 
 # The Perl object is blessed into 'CLASS', which should be a
@@ -31,5 +54,29 @@ O_OBJECT
 		sv_setref_pv( $arg, CLASS, (void*)pointers );
 	} else {
 		XSRETURN_UNDEF;
+	}
+
+# These are copies of the T_ARRAY typemap, but modified to accept
+# fixed sized arrays of double values.
+O_VEC3
+	{
+		U32 v_index;
+		EXTEND( SP, 3 );
+		for ( v_index = 0; v_index < 3; v_index++ ) {
+			ST( v_index ) = sv_newmortal();
+			sv_setnv( ST(v_index), (double)${var}[v_index] );
+		}
+		XSRETURN(3);
+	}
+
+O_VEC4
+	{
+		U32 v_index;
+		EXTEND( SP, 4 );
+		for ( v_index = 0; v_index < 4; v_index++ ) {
+			ST( v_index ) = sv_newmortal();
+			sv_setnv( ST(v_index), (double)${var}[v_index] );
+		}
+		XSRETURN(4);
 	}
 

@@ -31,12 +31,16 @@ oob_set_position( body, x, y, z )
 	CODE:
 		dBodySetPosition( body, x, y, z );
 
-AV *
+dReal *
 oob_get_position( body )
 		dBodyID body
+	PREINIT:
+		U32 size_RETVAL;
 	CODE:
-		dReal *p = dBodyGetPosition( body );
-		RETVAL = ptr_to_av( p, 3 );
+		size_RETVAL = 3;
+		RETVAL = dBodyGetPosition( body );
 	OUTPUT:
 		RETVAL
+	CLEANUP:
+		XSRETURN(size_RETVAL);
 

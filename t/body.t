@@ -16,12 +16,10 @@ my @position = ( 1, 2, 3 );
 
 ODE::Objects::Body::set_position( $body, @position );
 
-cmp_ok( abs( ODE::Objects::Body::get_position($body)->[0] - $position[0] ),
-    '<', 1e-5, 'get_position x' );
-cmp_ok( abs( ODE::Objects::Body::get_position($body)->[1] - $position[1] ),
-    '<', 1e-5, 'get_position y' );
-cmp_ok( abs( ODE::Objects::Body::get_position($body)->[2] - $position[2] ),
-    '<', 1e-5, 'get_position z' );
+my @_position = ODE::Objects::Body::get_position($body);
+cmp_ok( abs( $_position[0] - $position[0] ), '<', 1e-5, 'get_position x' );
+cmp_ok( abs( $_position[1] - $position[1] ), '<', 1e-5, 'get_position y' );
+cmp_ok( abs( $_position[2] - $position[2] ), '<', 1e-5, 'get_position z' );
 
 done_testing();
 

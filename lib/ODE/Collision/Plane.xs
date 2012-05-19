@@ -32,13 +32,11 @@ ocp_set_params( plane, a, b, c, d )
 	CODE:
 		dGeomPlaneSetParams( plane, a, b, c, d );
 
-AV *
+dVector4
 ocp_get_params( plane )
 		dGeomID plane
 	CODE:
-		dVector4 params;
-		dGeomPlaneGetParams( plane, params );
-		RETVAL = dv4_to_av(params);
+		dGeomPlaneGetParams( plane, RETVAL );
 	OUTPUT:
 		RETVAL
 
