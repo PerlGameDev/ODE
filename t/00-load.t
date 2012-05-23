@@ -19,5 +19,7 @@ BEGIN {
     }
 }
 
+diag("Testing ODE $ODE::VERSION, Perl $], $^X");
+
 done_testing();
 
